@@ -1,0 +1,65 @@
+template (adl_version=2.0.5; rm_release=1.0.2; generated)
+    openEHR-EHR-COMPOSITION.test.v1.0.0
+
+specialize
+    openEHR-EHR-COMPOSITION.summary.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["sl"] = <
+            author = <
+                ["name"] = <"?">
+            >
+            language = <[ISO_639-1::sl]>
+        >
+    >
+    
+description
+    copyright = <"">
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            misuse = <"">
+            purpose = <"To record a persistent record of some aspect of the health status of the patient e.g Vaccination status, Allergies
+">
+            use = <"">
+        >
+        ["sl"] = <
+            language = <[ISO_639-1::sl]>
+            misuse = <"*(en)">
+            purpose = <"*To record a persistent record of some aspect of the health status of the patient e.g Vaccination status, Allergies
+(en)">
+            use = <"*(en)">
+        >
+    >
+    lifecycle_state = <"unmanaged">
+    original_author = <
+        ["name"] = <"Dr Ian McNicoll">
+        ["organisation"] = <"Ocean Informatics, United Kingdom">
+        ["email"] = <"ian.mcnicoll@oceaninformatics.com">
+        ["date"] = <"09/03/2011">
+    >
+
+definition
+    COMPOSITION[id1.1] matches {    -- Patient summary
+        /category[id2]/defining_code matches {[at1]}
+        content
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id1.1"] = <
+                text = <"Patient summary">
+                description = <"A snapshot summary of the vaccination record.">
+            >
+        >
+        ["sl"] = <
+            ["id1.1"] = <
+                text = <"*Patient summary(en)">
+                description = <"*A snapshot summary of the vaccination record.(en)">
+            >
+        >
+    >
+
